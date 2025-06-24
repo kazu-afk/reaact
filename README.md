@@ -1,1 +1,1 @@
-foundationsの勉強用
+foundationsの勉強用です！
