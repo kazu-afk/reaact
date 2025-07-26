@@ -5,11 +5,12 @@ type Props = {
 	message: string;
 	children: ReactNode;
 	onClick: (message: string) => void;
+	type: 'button' | 'submit' | 'reset'; 
 };
-export const Button: FC<Props> = ({ message, children, onClick }) => {
+export const Button: FC<Props> = ({ message, children, onClick, type= 'button' }) => {
 	return (
-		<button onClick={() => onClick(message)}>
-			{children} "{message}"
+		<button type={type} onClick={() => onClick(message)} title={message}>
+			{children} 
 		</button>
 	);
 };
